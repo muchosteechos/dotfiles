@@ -1,3 +1,10 @@
 [user]
 	email = s.szieguad@gmail.com
 	name = Steen Sziegaud
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[core]
+	excludefiles = /home/steen/.gitignore_global

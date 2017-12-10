@@ -15,6 +15,15 @@ fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 eval "$(hub alias -s)"
 
+# Set the TERM Color
+TERM=xterm-256color
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/steen/anaconda3/bin:$PATH"
+
+### Adds exercism-cli to path
+export PATH=$HOME/bin:$PATH
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
