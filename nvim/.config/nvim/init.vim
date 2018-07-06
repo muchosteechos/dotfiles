@@ -42,6 +42,9 @@ call plug#end()
 "======================= Settings ========================
 "=========================================================
 
+" Syntax highlighting
+syntax enable
+
 " Colors
 set termguicolors
 colorscheme one
@@ -50,6 +53,8 @@ set background=dark
 set number
 
 let mapleader=","
+
+"========== Default Whitespace-handling ==========
 
 "=========================================================
 "======================= Mappings ========================
@@ -72,9 +77,10 @@ vno <up> <Nop>
 "=========================================================
 "=================== airline Settings ====================
 "=========================================================
+
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
-  endif
+endif
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -108,3 +114,10 @@ let g:airline_symbols.maxlinenr = ''
 
 " set airline-theme
 let g:airline_theme = 'one'
+
+"=========================================================
+"=================== Python Settings =====================
+"=========================================================
+
+" python-syntax highlighting 
+let g:python_highlight_all = 1
