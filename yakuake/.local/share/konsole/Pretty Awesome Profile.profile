@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=base16-spacemacs
-Font=SpaceMono Nerd Font Mono,12,-1,5,75,0,0,0,0,0
+ColorScheme=Solarized
+Font=Hack,12,-1,5,75,0,0,0,0,0
 
 [General]
 LocalTabTitleFormat=%d : %n

@@ -1,9 +1,9 @@
 [Appearance]
 ColorScheme=base16-spacemacs
-Font=SpaceMono Nerd Font Mono,12,-1,5,75,0,0,0,0,0
+Font=Hack,12,-1,5,50,0,0,0,0,0
 
 [General]
-Name=Pretty Awesome Transparent
+Name=Transparent
 Parent=FALLBACK/
 
 [Scrolling]
