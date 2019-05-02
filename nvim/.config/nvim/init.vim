@@ -22,6 +22,12 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'pangloss/vim-javascript'
 " vimux - interact with tmux inside vim
 Plug 'benmills/vimux'
+" emmet - improved html and css
+" Plug 'mattn/emmet-vim'
+" html5 - indent and syntax & inline omnicomplete for html5
+Plug 'othree/html5.vim'
+" vimtex - better LaTeX support
+Plug 'lervag/vimtex'
 " vim-devicons - adds glyphs to various vim plugins
 " NOTE: always load last
 Plug 'ryanoasis/vim-devicons'
@@ -40,6 +46,12 @@ syntax enable
 set termguicolors
 colorscheme one
 set background=dark
+
+" Default indentation
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 set number
 
@@ -132,3 +144,13 @@ let g:airline_theme = 'one'
 "================
 " python-syntax highlighting 
 let g:python_highlight_all = 1
+
+
+"================
+" HTML & CSS
+"================
+
+"================
+" LaTeX
+"================
+
