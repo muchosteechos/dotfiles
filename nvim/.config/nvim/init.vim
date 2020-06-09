@@ -7,7 +7,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " vim-one - Light and dark vim colorscheme, shamelessly stolen from atom
 Plug 'rakr/vim-one'
 " NerdTree - a tree explorer
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 " fugitive - git wrapper
 Plug 'tpope/vim-fugitive'
 " vim-airline - status/tabline for vim
@@ -18,6 +18,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-python/python-syntax'
 " python-pep8-indent - better python indentation conforming to pep8
 Plug 'Vimjas/vim-python-pep8-indent'
+" StanAngeloff/php.vim - an up-to-date Vim syntax for PHP
+Plug 'StanAngeloff/php.vim'
 " pangloss/vim-javascript - improved JavaScript indentation and syntax
 Plug 'pangloss/vim-javascript'
 " vimux - interact with tmux inside vim
@@ -29,6 +31,10 @@ Plug 'othree/html5.vim'
 " vimtex - better LaTeX support
 Plug 'lervag/vimtex'
 " vim-devicons - adds glyphs to various vim plugins
+" vim-sensible - a universal set of defaults that (hopefully) everyone can agree on
+Plug 'tpope/vim-sensible'
+" vim-grepper - use your favorite grep tool to start asynchronous search
+Plug 'mhinz/vim-grepper'
 " NOTE: always load last
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
