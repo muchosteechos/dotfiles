@@ -53,6 +53,9 @@ set termguicolors
 colorscheme one
 set background=dark
 
+" whitespace options
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
+
 " Default indentation
 set expandtab
 set tabstop=2
@@ -80,6 +83,11 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
+
+" grepper mappings
+nmap gs  <plug>(GrepperOperator)
+xmap gs  <plug>(GrepperOperator)
+
 
 " window handling mappings
 "=========================
@@ -160,3 +168,7 @@ let g:python_highlight_all = 1
 " LaTeX
 "================
 
+"================
+" NERTree settings
+"================
+:let g:NERDTreeWinSize = 22
