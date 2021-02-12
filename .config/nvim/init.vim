@@ -4,8 +4,9 @@
 call plug#begin('~/.config/nvim/plugged')
 " vim-tmux-nav - allows seamless navigation between vim and tmux splits
 Plug 'christoomey/vim-tmux-navigator'
-" vim-one - Light and dark vim colorscheme, shamelessly stolen from atom
-Plug 'rakr/vim-one'
+" awesome-vim-colorschemes - collection of awesome color schemes for vim
+" merged for quick use
+Plug 'rafi/awesome-vim-colorschemes'
 " fugitive - git wrapper
 Plug 'tpope/vim-fugitive'
 " vim-airline - status/tabline for vim
