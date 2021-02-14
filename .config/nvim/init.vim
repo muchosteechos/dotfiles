@@ -21,6 +21,12 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-sensible'
 " vim-grepper - use your favorite grep tool to start asynchronous search
 Plug 'mhinz/vim-grepper'
+" vimwiki - a personal wiki for Vim
+Plug 'vimwiki/vimwiki'
+" vim-commentary - comment stuff out fast & easy
+Plug 'tpope/vim-commentary'
+" chadtree - file manager for Neovim, Better than NERDTree.
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do':'python3 -m chadtree deps'}
 " NOTE: always load last
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -33,6 +39,7 @@ set nocompatible
 
 " Syntax highlighting
 syntax enable
+filetype plugin on
 
 " Colors
 set termguicolors
@@ -158,3 +165,8 @@ let g:python_highlight_all = 1
 " NERTree settings
 "================
 ":let g:NERDTreeWinSize = 22
+"
+"================
+" vimwiki settings
+"================
+let g:vimwiki_list = [{'syntax': 'markdown'}]
