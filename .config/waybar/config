@@ -1,4 +1,3 @@
-
 {
 	"layer": "top",
 	"modules-left": ["sway/workspaces", "sway/mode"],
@@ -24,7 +23,7 @@
 	},
 	"network": {
 		"tooltip": false,
-		"format-wifi": " {essid} {ipaddr}",
+		"format-wifi": " {essid}",
 		"format-ethernet": " {ipaddr}"
 	},
 	"cpu": {
