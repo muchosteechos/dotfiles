@@ -27,12 +27,15 @@ set $right l
 # Terminal
 set $term alacritty
 
+# Editor
+set $editor nvim
+
 # Swaylock
-# set $swaylock swaylock-fancy -f "Hack-Regular-Nerd-Font-Complete"
+set $swaylock swaylock
 
 # Menu
 # set $menu bemenu-run --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight" | xargs swaymsg exec
-set $menu wofi -c ~/.config/wofi/config
+set $menu wofi -c ~/.config/wofi/config | xargs swaymsg exec
 # set $menu-window rofi -show window
 
 # Output names
@@ -90,7 +93,7 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exit
 
 # Lock
-# bindsym $mod+Control+l exec $swaylock
+bindsym $mod+Control+l exec $swaylock
 
 # Open run menu
 bindsym $mod+d exec $menu-run

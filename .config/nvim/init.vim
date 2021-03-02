@@ -9,6 +9,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'rafi/awesome-vim-colorschemes'
 " fugitive - git wrapper
 Plug 'tpope/vim-fugitive'
+" coc - make your neovim as smart as VSCode
+" Plug 'neoclide/coc.nvim' {'branch': 'release'}
 " vim-airline - status/tabline for vim
 Plug 'vim-airline/vim-airline'
 " vim-airline-themes - official theme repository for vim-airline 
@@ -19,10 +21,13 @@ Plug 'vim-python/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 " vim-sensible - a universal set of defaults that (hopefully) everyone can agree on
 Plug 'tpope/vim-sensible'
+" vimtex - VimTeX is a modern neovim filetype and syntax plugin for LaTeX
+Plug 'lervag/vimtex'
 " vim-grepper - use your favorite grep tool to start asynchronous search
 Plug 'mhinz/vim-grepper'
 " vimwiki - a personal wiki for Vim
 Plug 'vimwiki/vimwiki'
+" vim-snippets - 
 " vim-commentary - comment stuff out fast & easy
 Plug 'tpope/vim-commentary'
 " chadtree - file manager for Neovim, Better than NERDTree.
@@ -58,16 +63,17 @@ set shiftwidth=2
 set number
 
 let mapleader=","
+let maplocalleader='\'
 
 
 "=========
 " Mappings
 "=========
 " Unmap the arrow keys
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-no <up> ddkP
+no <down> <Nop>
+no <left> ddkP
+no <right> ddp
+no <up> <Nop>
 ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
@@ -76,6 +82,14 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
+
+" Unmap mouse
+set mouse=""
+
+map <ScrollWheelUp> <nop>
+map <S-ScrollWheelUp> <nop>
+map <ScrollWheelDown> <nop>
+map <S-ScrollWheelDown> <nop>
 
 " grepper mappings
 "nmap gs  <plug>(GrepperOperator)
@@ -160,6 +174,10 @@ let g:python_highlight_all = 1
 "================
 " LaTeX
 "================
+
+" vimtex
+"================
+let g:vimtex_view_method = 'zathura'
 
 "================
 " NERTree settings
