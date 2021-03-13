@@ -8,3 +8,5 @@
 	br = branch
 [core]
 	excludefiles = /home/steen/.gitignore_global
+[init]
+	defaultBranch = main
