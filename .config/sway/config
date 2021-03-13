@@ -35,8 +35,10 @@ set $swaylock swaylock
 
 # Menu
 # set $menu bemenu-run --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight" | xargs swaymsg exec
-set $menu wofi -c ~/.config/wofi/config | xargs swaymsg exec
+set $menu wofi --show=drun 
 # set $menu-window rofi -show window
+set $screenshot grim -g "$( slurp )"
+set $anki-screenshot anki-screenshot
 
 # Output names
 # set $monitor-left HDMI-A-1
@@ -66,7 +68,7 @@ set $workspace10 10
 #output $monitor-left bg /home/short/Photos/wallpapers/left.jpg fill
 #output $monitor-center bg /home/short/Photos/wallpapers/center.jpg fill
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/steen/Pictures/Wallpaper/alana_aenami-allineed.png fill
+output * bg /home/steen/Pictures/Wallpaper/rocket_02.jpg fill
 
 # Positioning
 #output $monitor-left resolution 1920x1080 position 0,300
@@ -96,7 +98,11 @@ bindsym $mod+Shift+e exit
 bindsym $mod+Control+l exec $swaylock
 
 # Open run menu
-bindsym $mod+d exec $menu-run
+bindsym $mod+d exec $menu
+
+# Take screenshot
+bindsym $mod+p exec $screenshot
+bindsym $mod+Shift+p exec $anki-screenshot
 
 # Open window menu
 # bindsym $mod+Shift+d exec $menu-window
