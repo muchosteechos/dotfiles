@@ -11,12 +11,27 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt histallowclobber histignorespace histnostore histreduceblanks sharehistory
 
-
 ### OTHER SETTINGS ###
 setopt autocd extendedglob localoptions nobeep nomatch notify
 
 # ALIASES
-alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotconf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME '
+
+# for sedway and wayne algorithms
+alias javacswa='/usr/bin/javac -cp "$HOME/Documents/personal/study/SEDWAY_ALGORITHMS/coursera/partI/assignments/lib/algs4.jar:."'
+alias javaswa='/usr/bin/java -cp "$HOME/Documents/personal/study/SEDWAY_ALGORITHMS/coursera/partI/assignments/lib/algs4.jar:."'
+alias jdbswa='/usr/bin/jdb -classpath "$HOME/Documents/personal/study/SEDWAY_ALGORITHMS/coursera/partI/assignments/lib/algs4.jar:."'
+
+# for anki-vim to set the default path for decks to '.local/share/ankidecks/'
+alias avim='/home/steen/.local/bin/anki-vim --deckpath "$HOME/.local/share/ankidecks/"'
+
+# nvim alias
+alias vi='nvim'
+
+# colorize ls output
+alias ls='ls --color=auto'
+# long listing
+alias ll='ls -la'
 
 # keybinding mode: vi
 bindkey -v
