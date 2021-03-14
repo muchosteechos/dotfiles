@@ -2,37 +2,38 @@
 " vim plug - load plugins
 "========================
 call plug#begin('~/.config/nvim/plugged')
-" vim-tmux-nav - allows seamless navigation between vim and tmux splits
-Plug 'christoomey/vim-tmux-navigator'
-" awesome-vim-colorschemes - collection of awesome color schemes for vim
-" merged for quick use
-Plug 'rafi/awesome-vim-colorschemes'
-" fugitive - git wrapper
-Plug 'tpope/vim-fugitive'
-" coc - make your neovim as smart as VSCode
-" Plug 'neoclide/coc.nvim' {'branch': 'release'}
-" vim-airline - status/tabline for vim
-Plug 'vim-airline/vim-airline'
-" vim-airline-themes - official theme repository for vim-airline 
-Plug 'vim-airline/vim-airline-themes'
-" python-syntax - improved python syntax
-Plug 'vim-python/python-syntax'
-" python-pep8-indent - better python indentation conforming to pep8
-Plug 'Vimjas/vim-python-pep8-indent'
-" vim-sensible - a universal set of defaults that (hopefully) everyone can agree on
+" Essential
 Plug 'tpope/vim-sensible'
-" vimtex - VimTeX is a modern neovim filetype and syntax plugin for LaTeX
-Plug 'lervag/vimtex'
-" vim-grepper - use your favorite grep tool to start asynchronous search
-Plug 'mhinz/vim-grepper'
-" vimwiki - a personal wiki for Vim
-Plug 'vimwiki/vimwiki'
-" vim-snippets - 
-" vim-commentary - comment stuff out fast & easy
-Plug 'tpope/vim-commentary'
-" chadtree - file manager for Neovim, Better than NERDTree.
+
+Plug 'tpope/vim-fugitive'
+
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do':'python3 -m chadtree deps'}
-" NOTE: always load last
+Plug 'SirVer/ultisnips'
+
+" Utility
+Plug 'tpope/vim-commentary'
+
+" Integration
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'mhinz/vim-grepper'
+
+" File specific
+Plug 'vim-python/python-syntax'
+Plug 'Vimjas/vim-python-pep8-indent'
+
+Plug 'lervag/vimtex'
+
+" Style
+Plug 'rafi/awesome-vim-colorschemes'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Managment
+Plug 'vimwiki/vimwiki'
+    Plug 'tools-life/taskwiki'
+
+" NOTE: ALWAYS LOAD THIS LAST
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
@@ -44,7 +45,7 @@ set nocompatible
 
 " Syntax highlighting
 syntax enable
-filetype plugin on
+filetype on
 
 " Colors
 set termguicolors
@@ -56,9 +57,12 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
 
 " Default indentation
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" vim behavior
+set hidden
 
 set number
 
@@ -107,6 +111,8 @@ nnoremap <C-H> <C-W><C-H>
 " vv to generate new vertical split
 nnoremap <silent> vv <C-w>v 
 
+map <Leader>wm :resize<CR>
+map <Leader>we <C-w>=
 " vimux mappings
 "===============
 " prompt for a command to run
@@ -118,6 +124,12 @@ map <Leader>vi :VimuxInspectRunner<CR>
 " Zoom the tmux runner pane
 map <Leader>vz :VimuxZoomRunner<CR>
 
+" CHADtree mappings
+"===============
+map <Leader>co :CHADopen<CR>
+map <Leader>cf :CHADopen --always-focus<CR>
+
+" UltiSnips mappings
 
 "=================
 " airline settings
@@ -180,11 +192,15 @@ let g:python_highlight_all = 1
 let g:vimtex_view_method = 'zathura'
 
 "================
-" NERTree settings
-"================
-":let g:NERDTreeWinSize = 22
-"
-"================
 " vimwiki settings
 "================
-let g:vimwiki_list = [{'syntax': 'markdown'}]
+let g:vimwiki_list = [{'path': '~/other/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'list_margin': 0}]
+let g:vimwiki_h1_cb_checked = 2
+let g:vimwiki_listsyms = '✗○◐●✓'
+
+"================
+" UltiSnips settings
+"================
+let g:UltiSnipsSnippetDirectories=['custom_snips', "UltiSnips"]
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit=[$HOME.'/.config/custom_snips']
+
