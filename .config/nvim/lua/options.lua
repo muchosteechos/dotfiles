@@ -1,21 +1,34 @@
 -- Helper function
-local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
 
-local function opt(scope, key, value)
-  scopes[scope][key] = value
-  if scope ~= 'o' then 
-	  scopes['o'][key] = value 
-  end
+local opt_scopes = {o = vim.o, b = vim.bo, w = vim.wo}
+
+local function setopt(scope, option, value)
+  opt_scopes[scope][option] = value
+  if scope ~= 'o' then opt_scopes['o'][option] = value end
 end
 
--- Variables
-local indent = 2
 
+-- SETTING OPTIONS --
 -- Coloring & Syntax
--- opt('o', 'termguicolors', true)
+setopt('o', 'termguicolors', true)
 
 -- Indentation
-opt('b', 'expandtab', true)
-opt('b', 'smartindent', true)
-opt('b', 'tabstop', indent)
-opt('b', 'shiftwidth', indent)
+setopt('o', 'smartindent', true)
+
+setopt('b', 'expandtab', true)
+setopt('b', 'tabstop', 2)
+setopt('b', 'shiftwidth', 2)
+
+-- Display
+setopt('w', 'wrap', false)
+
+setopt('w', 'number', true)
+-- setopt('w', 'relativenumber', true)
+-- setopt('w', 'cursorline', true)
+
+-- Buffer handling
+-- setopt('o', 'hidden', true) -- buffers become hidden when abandoned
+
+-- Window handling
+setopt('o', 'splitright', true)
+setopt('o', 'splitbelow', true)
