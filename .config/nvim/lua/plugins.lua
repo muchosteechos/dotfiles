@@ -8,7 +8,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	execute 'packadd packer.nvim'
 end
 
-vim.cmd [[packadd packer.nvim]] -- required we have packer in 'opt' pack
+execute 'packadd packer.nvim'
+
 
 return require('packer').startup(function()
   -- packer can manage itself as an optional plugin
