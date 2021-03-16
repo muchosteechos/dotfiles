@@ -1,34 +1,26 @@
--- Helper function
-
-local opt_scopes = {o = vim.o, b = vim.bo, w = vim.wo}
-
-local function setopt(scope, option, value)
-  opt_scopes[scope][option] = value
-  if scope ~= 'o' then opt_scopes['o'][option] = value end
-end
+local utils = require('my_utils')
 
 
--- SETTING OPTIONS --
 -- Coloring & Syntax
-setopt('o', 'termguicolors', true)
+utils.opt('o', 'termguicolors', true)
 
 -- Indentation
-setopt('o', 'smartindent', true)
+utils.opt('o', 'smartindent', true)
 
-setopt('b', 'expandtab', true)
-setopt('b', 'tabstop', 2)
-setopt('b', 'shiftwidth', 2)
+utils.opt('b', 'expandtab', true)
+utils.opt('b', 'tabstop', 2)
+utils.opt('b', 'shiftwidth', 2)
 
 -- Display
-setopt('w', 'wrap', false)
+utils.opt('w', 'wrap', false)
 
-setopt('w', 'number', true)
--- setopt('w', 'relativenumber', true)
--- setopt('w', 'cursorline', true)
+utils.opt('w', 'number', true)
+-- utils.opt('w', 'relativenumber', true)
+-- utils.opt('w', 'cursorline', true)
 
 -- Buffer handling
--- setopt('o', 'hidden', true) -- buffers become hidden when abandoned
+-- utils.opt('o', 'hidden', true) -- buffers become hidden when abandoned
 
 -- Window handling
-setopt('o', 'splitright', true)
-setopt('o', 'splitbelow', true)
+utils.opt('o', 'splitright', true)
+utils.opt('o', 'splitbelow', true)
