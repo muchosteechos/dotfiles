@@ -1,7 +1,7 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
-local install_path = fn.stdpath('data')..'/site/pack/opt/packer.nvim'
+local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
 	execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
@@ -29,6 +29,8 @@ return require('packer').startup(function()
   use {'TimUntersberger/neogit'} -- WIP Magit clone for neovim
   -- use {'tpope/fugitive'} -- do I need it when I have neogit?
 
+  -- Icons
+  use {'kyazdani42/nvim-web-devicons'}
   -- Colors
   -- use {'norcalli/nvim-colorizer.lua'}
   use {'ChristianChiarulli/nvcode-color-schemes.vim'} -- colorschemes with treesitter support (my favorite colorschemes included)
