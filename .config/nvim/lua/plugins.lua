@@ -15,7 +15,10 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- LSP
-  use {'neovim/nvim-lspconfig'}
+  use {
+    'neovim/nvim-lspconfig',
+    config = function() require'c-lsp' end,
+  }
   -- lsp built-arounds
   -- Completion
   use {
@@ -30,11 +33,6 @@ return require('packer').startup(function()
     config = function() require'c-treesitter' end,
   } -- treesitter config and abstraction layer
 
-  -- File Explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    -- requires = {'kyazdani42/nvim-web-devicons'},
-  }
 
   -- Git Integration
   use {'TimUntersberger/neogit'} -- WIP Magit clone for neovim
@@ -46,17 +44,22 @@ return require('packer').startup(function()
   -- use {'norcalli/nvim-colorizer.lua'}
   use {'ChristianChiarulli/nvcode-color-schemes.vim'} -- colorschemes with treesitter support (my favorite colorschemes included)
   use {'Th3Whit3Wolf/space-nvim'} -- space-nvim with treesitter support
-  use {'mhartington/oceanic-next'}
   use {
     'sainnhe/edge',
     config = function() require'c-edge-colorscheme' end,
+  }
+
+  -- File Explorer
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {'nvim-web-devicons'},
   }
 
   -- Status- & Tabline
   use {
     'glepnir/galaxyline.nvim', 
     config = function() require'c-galaxyline' end,
-    -- requires = {'kyazdani42/nvim-web-devicons',}
+    requires = {'kyazdani42/nvim-web-devicons',}
   }
   -- use {
   --  'romgrk/barbar.nvim',

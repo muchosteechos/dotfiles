@@ -3,7 +3,8 @@ local utils = require('my_utils')
 utils.opt('o', 'completeopt', 'menuone,noselect')
 
 -- pretty much default configuration
--- think/get info about how to get good sorting of items
+-- think/get info about how to prioritize sources
+-- look at tree-sitter source
 require'compe'.setup {
   enabled = true;
   autocomplete = false; -- open the menu automatically: false
