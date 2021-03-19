@@ -17,7 +17,12 @@ return require('packer').startup(function()
   -- LSP
   use {'neovim/nvim-lspconfig'}
   -- lsp built-arounds
-
+  -- Completion
+  use {
+    'hrsh7th/nvim-compe',
+    config = function() require'c-nvim-compe' end,
+  }
+ 
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter', 
@@ -28,7 +33,7 @@ return require('packer').startup(function()
   -- File Explorer
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {'kyazdani42/nvim-web-devicons'},
+    -- requires = {'kyazdani42/nvim-web-devicons'},
   }
 
   -- Git Integration
@@ -41,19 +46,25 @@ return require('packer').startup(function()
   -- use {'norcalli/nvim-colorizer.lua'}
   use {'ChristianChiarulli/nvcode-color-schemes.vim'} -- colorschemes with treesitter support (my favorite colorschemes included)
   use {'Th3Whit3Wolf/space-nvim'} -- space-nvim with treesitter support
+  use {'mhartington/oceanic-next'}
+  use {
+    'sainnhe/edge',
+    config = function() require'c-edge-colorscheme' end,
+  }
 
   -- Status- & Tabline
   use {
     'glepnir/galaxyline.nvim', 
     config = function() require'c-galaxyline' end,
-    requires = {'kyazdani42/nvim-web-devicons'}
+    -- requires = {'kyazdani42/nvim-web-devicons',}
   }
-  use {
-    'romgrk/barbar.nvim',
-    config = function() require'c-barbar' end
-  }
+  -- use {
+  --  'romgrk/barbar.nvim',
+  --  config = function() require'c-barbar' end
+  --}
 
   -- Simple quality of life improvements
   use {'glepnir/prodoc.nvim'} -- comment and annotation plugin
   use {'gennaro-tedesco/nvim-peekup'} -- dynamically interact with vim registers
+
 end)
