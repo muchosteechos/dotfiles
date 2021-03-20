@@ -33,6 +33,13 @@ return require('packer').startup(function()
     config = function() require'c-treesitter' end,
   } -- treesitter config and abstraction layer
 
+  -- Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    config = function() require'c-telescope' end,
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
+
 
   -- Git Integration
   use {'TimUntersberger/neogit'} -- WIP Magit clone for neovim
@@ -52,7 +59,8 @@ return require('packer').startup(function()
   -- File Explorer
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {'nvim-web-devicons'},
+    config = function() require'c-nvim-tree' end,
+    -- requires = {'nvim-web-devicons'},
   }
 
   -- Status- & Tabline
@@ -69,5 +77,6 @@ return require('packer').startup(function()
   -- Simple quality of life improvements
   use {'glepnir/prodoc.nvim'} -- comment and annotation plugin
   use {'gennaro-tedesco/nvim-peekup'} -- dynamically interact with vim registers
+  -- use {'monaqa/dial.nvim'} -- consider
 
 end)
