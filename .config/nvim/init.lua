@@ -5,4 +5,4 @@ require('keymappings')
 require('colorscheme')
 
 -- for now load lsp-config in init
-require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.pyright.setup{}
