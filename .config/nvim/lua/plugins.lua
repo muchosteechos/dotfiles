@@ -26,6 +26,16 @@ return require('packer').startup(function()
     config = function() require'c-nvim-compe' end,
   }
  
+  -- Snippets
+  use {
+    'SirVer/ultisnips',
+    config = function() require'c-ultisnips' end,
+    requires = {
+      'honza/vim-snippets',
+      config = function() require'c-vim-snippets' end,
+    }
+  }
+
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter', 
@@ -40,17 +50,19 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
 
-
   -- Git Integration
   use {'TimUntersberger/neogit'} -- WIP Magit clone for neovim
   -- use {'tpope/fugitive'} -- do I need it when I have neogit?
 
+  -- Debugging
+  use {'mfussenegger/nvim-dap'} -- Debug Adapter Protocol client implementation
+
   -- Icons
   use {'kyazdani42/nvim-web-devicons'}
   -- Colors
-  -- use {'norcalli/nvim-colorizer.lua'}
-  use {'ChristianChiarulli/nvcode-color-schemes.vim'} -- colorschemes with treesitter support (my favorite colorschemes included)
-  use {'Th3Whit3Wolf/space-nvim'} -- space-nvim with treesitter support
+  use {'norcalli/nvim-colorizer.lua'}
+  use {'ChristianChiarulli/nvcode-color-schemes.vim'}
+  use {'Th3Whit3Wolf/space-nvim'}
   use {
     'sainnhe/edge',
     config = function() require'c-edge-colorscheme' end,
@@ -79,4 +91,15 @@ return require('packer').startup(function()
   use {'gennaro-tedesco/nvim-peekup'} -- dynamically interact with vim registers
   -- use {'monaqa/dial.nvim'} -- consider
 
+  -- vimwiki
+  use {
+    'vimwiki/vimwiki',
+    config = function() require'c-vimwiki' end,
+    requires = {'tools-life/taskwiki',}
+  }
+
+  -- Startpage
+  use {
+    'mhinz/vim-startify',
+  }
 end)
