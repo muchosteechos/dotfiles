@@ -16,7 +16,7 @@ utils.opt('w', 'wrap', false)
 
 utils.opt('w', 'number', true)
 -- utils.opt('w', 'relativenumber', true)
--- utils.opt('w', 'cursorline', true)
+utils.opt('w', 'cursorline', true)
 
 -- Buffer handling
 -- utils.opt('o', 'hidden', true) -- buffers become hidden when abandoned

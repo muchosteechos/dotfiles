@@ -101,5 +101,6 @@ return require('packer').startup(function()
   -- Startpage
   use {
     'mhinz/vim-startify',
+    config = function() require'c-startify' end,
   }
 end)
