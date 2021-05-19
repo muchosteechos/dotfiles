@@ -14,17 +14,28 @@ return require('packer').startup(function()
   -- packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
+  -- lua helpers
+  use {'norcalli/nvim_utils'}
+
   -- LSP
   use {
     'neovim/nvim-lspconfig',
     config = function() require'c-lsp' end,
   }
+
+  -- jdtls - java LSP
+  use {
+    'mfussenegger/nvim-jdtls',
+    -- config = function() require'c-jdtls' end,
+  }
+
   -- lsp built-arounds
   -- Completion
   use {
     'hrsh7th/nvim-compe',
     config = function() require'c-nvim-compe' end,
   }
+  
  
   -- Snippets
   use {
@@ -102,5 +113,11 @@ return require('packer').startup(function()
   use {
     'mhinz/vim-startify',
     config = function() require'c-startify' end,
+  }
+
+  -- LaTeX support
+  use {
+    'lervag/vimtex',
+    config = function() require'c-vimtex' end,
   }
 end)

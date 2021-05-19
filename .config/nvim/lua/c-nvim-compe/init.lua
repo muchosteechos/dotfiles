@@ -4,7 +4,6 @@ utils.opt('o', 'completeopt', 'menuone,noselect')
 
 -- pretty much default configuration
 -- think/get info about how to prioritize sources
--- look at tree-sitter source
 require'compe'.setup {
   enabled = true;
   autocomplete = false; -- open the menu automatically: false
@@ -26,6 +25,7 @@ require'compe'.setup {
     nvim_lsp = true;
     nvim_lua = true;
     ultisnips = true;
+    treesitter = true;
   };
 }
 
