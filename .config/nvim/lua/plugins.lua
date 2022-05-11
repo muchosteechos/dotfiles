@@ -24,10 +24,10 @@ return require('packer').startup(function()
   }
 
   -- jdtls - java LSP
-  use {
-    'mfussenegger/nvim-jdtls',
+  -- use {
+  --  'mfussenegger/nvim-jdtls',
     -- config = function() require'c-jdtls' end,
-  }
+  -- }
 
   -- lsp built-arounds
   -- Completion

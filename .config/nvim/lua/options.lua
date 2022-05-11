@@ -8,8 +8,8 @@ utils.opt('o', 'termguicolors', true)
 utils.opt('o', 'smartindent', true)
 
 utils.opt('b', 'expandtab', true)
-utils.opt('b', 'tabstop', 2)
-utils.opt('b', 'shiftwidth', 2)
+utils.opt('b', 'tabstop', 4)
+utils.opt('b', 'shiftwidth', 4)
 
 -- Display
 utils.opt('w', 'wrap', false)
