@@ -37,6 +37,8 @@ set $swaylock swaylock
 # set $menu bemenu-run --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight" | xargs swaymsg exec
 set $menu wofi --show=drun 
 # set $menu-window rofi -show window
+
+# Other
 set $screenshot grim -g "$( slurp )"
 set $anki-screenshot anki-screenshot
 
