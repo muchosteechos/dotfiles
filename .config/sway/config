@@ -43,8 +43,8 @@ set $screenshot grim -g "$( slurp )"
 set $anki-screenshot anki-screenshot
 
 # Output names
-# set $monitor-left HDMI-A-1
-# set $monitor-center HDMI-A-2
+set $monitor-left HDMI-A-2
+set $monitor-center HDMI-A-1
 
 # Workspace names
 set $workspace1 1
@@ -74,7 +74,7 @@ output * bg /home/steen/Pictures/Wallpaper/rocket_02.jpg fill
 
 # Positioning
 #output $monitor-left resolution 1920x1080 position 0,300
-#output $monitor-center resolution 1920x1080 position 1920,0
+#output $monitor-right resolution 1920x1080 position 1920,0
 
 ###################################################
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#

@@ -1,1 +1,8 @@
-vim.api.nvim_set_keymap('n', '<Leader>nt', "<cmd>lua require('nvim-tree').toggle()<cr>", { noremap = true })
+-- empty setup using defaults
+require'nvim-tree'.setup {
+}
+
+vim.api.nvim_set_keymap('n', '<Leader>nt', '', {
+    noremap = true, 
+    callback = require'nvim-tree'.toggle,
+})

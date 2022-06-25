@@ -16,6 +16,7 @@ return require('packer').startup(function()
 
   -- lua helpers
   use {'norcalli/nvim_utils'}
+  use {'nvim-lua/plenary.nvim'}
 
   -- LSP
   use {
@@ -29,13 +30,11 @@ return require('packer').startup(function()
     -- config = function() require'c-jdtls' end,
   -- }
 
-  -- lsp built-arounds
   -- Completion
   use {
-    'hrsh7th/nvim-compe',
-    config = function() require'c-nvim-compe' end,
+    'hrsh7th/nvim-cmp',
+    config = function() require'c-nvim-cmp' end,
   }
-  
  
   -- Snippets
   use {
@@ -58,12 +57,14 @@ return require('packer').startup(function()
   use {
     'nvim-telescope/telescope.nvim',
     config = function() require'c-telescope' end,
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = 'nvim-lua/popup.nvim',
   }
 
   -- Git Integration
-  use {'TimUntersberger/neogit'} -- WIP Magit clone for neovim
-  -- use {'tpope/fugitive'} -- do I need it when I have neogit?
+  use {
+      'TimUntersberger/neogit',
+      requires = 'sindrets/diffview.nvim',
+  } -- WIP Magit clone for neovim
 
   -- Debugging
   use {'mfussenegger/nvim-dap'} -- Debug Adapter Protocol client implementation
@@ -99,7 +100,6 @@ return require('packer').startup(function()
 
   -- Simple quality of life improvements
   use {'glepnir/prodoc.nvim'} -- comment and annotation plugin
-  use {'gennaro-tedesco/nvim-peekup'} -- dynamically interact with vim registers
   -- use {'monaqa/dial.nvim'} -- consider
 
   -- vimwiki
