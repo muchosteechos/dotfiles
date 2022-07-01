@@ -70,7 +70,8 @@ set $workspace10 10
 #output $monitor-left bg /home/short/Photos/wallpapers/left.jpg fill
 #output $monitor-center bg /home/short/Photos/wallpapers/center.jpg fill
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/steen/Pictures/Wallpaper/rocket_02.jpg fill
+#output * bg /home/steen/Pictures/Wallpaper/rocket_02.jpg fill
+output * bg /home/steen/Pictures/Wallpaper/alana_aenami-allineed.png
 
 # Positioning
 #output $monitor-left resolution 1920x1080 position 0,300
