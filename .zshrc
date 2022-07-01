@@ -47,6 +47,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Variable Setup
+export XDG_CONIFG_HOME=$HOME/.config/
+export XDG_DATA_HOME=$HOME/.local/share/
 
 # zsh-autosuggestions settings
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
