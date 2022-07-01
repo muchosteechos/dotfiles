@@ -34,6 +34,10 @@ return require('packer').startup(function()
   use {
     'hrsh7th/nvim-cmp',
     config = function() require'c-nvim-cmp' end,
+    requires = {
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+    }
   }
  
   -- Snippets
@@ -105,8 +109,12 @@ return require('packer').startup(function()
   -- vimwiki
   use {
     'vimwiki/vimwiki',
+    branch = 'dev',
     config = function() require'c-vimwiki' end,
-    requires = {'tools-life/taskwiki',}
+  }
+  use { 
+    'tools-life/taskwiki' ,
+    require = function() require'c-taskwiki' end,
   }
 
   -- Startpage

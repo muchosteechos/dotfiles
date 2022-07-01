@@ -1,14 +1,15 @@
---[[
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
---]]
-vim.api.nvim_set_keymap('n', '<Leader>ff', '', {
-    noremap = true,
-    callback = require'telescope.builtin'.find_files,
-})
-vim.api.nvim_set_keymap('n', '<Leader>fgl', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>fgg', "<cmd>lua require('telescope.builtin').grep_string()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", { noremap = true })
+vim.keymap.set('n', '<Leader>tf', require('telescope.builtin').find_files,
+    { noremap = true, desc = 'Telescope: find files' }
+)
+vim.keymap.set('n', '<Leader>tg', require('telescope.builtin').live_grep,
+    { noremap = true,  desc = 'Telescope: Live grep' }
+)
+vim.keymap.set('n', '<Leader>tb', require('telescope.builtin').buffers,
+    { noremap = true, desc = 'Telescope: Search in buffers'}
+)
+vim.keymap.set('n', '<Leader>th', require('telescope.builtin').help_tags,
+    { noremap = true, desc = 'Telescope: search in vim help tags' }
+)
+vim.keymap.set('n', '<Leader>tkm', require('telescope.builtin').keymaps,
+    { noremap = true, desc = 'Telescope: lookup keymaps' }
+)

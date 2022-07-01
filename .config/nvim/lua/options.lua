@@ -1,26 +1,20 @@
-local utils = require('my_utils')
+local api = vim.api
 
+-- colors/syntax
+api.nvim_set_option('termguicolors', true)
 
--- Coloring & Syntax
-utils.opt('o', 'termguicolors', true)
+-- indentation
+api.nvim_set_option('smartindent', true)
+api.nvim_set_option('expandtab', true)
+api.nvim_set_option('tabstop', 4)
+api.nvim_set_option('shiftwidth', 4)
 
--- Indentation
-utils.opt('o', 'smartindent', true)
+-- window settings
+api.nvim_win_set_option(0, 'wrap', false)
+api.nvim_win_set_option(0, 'number', true)
+api.nvim_win_set_option(0, 'cursorline', true)
+api.nvim_win_set_option(0, 'relativenumber', true)
 
-utils.opt('b', 'expandtab', true)
-utils.opt('b', 'tabstop', 4)
-utils.opt('b', 'shiftwidth', 4)
-
--- Display
-utils.opt('w', 'wrap', false)
-
-utils.opt('w', 'number', true)
--- utils.opt('w', 'relativenumber', true)
-utils.opt('w', 'cursorline', true)
-
--- Buffer handling
--- utils.opt('o', 'hidden', true) -- buffers become hidden when abandoned
-
--- Window handling
-utils.opt('o', 'splitright', true)
-utils.opt('o', 'splitbelow', true)
+-- split behavior
+api.nvim_set_option('splitright', true)
+api.nvim_set_option('splitbelow', true)
